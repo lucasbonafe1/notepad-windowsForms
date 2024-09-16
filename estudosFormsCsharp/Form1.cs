@@ -50,5 +50,18 @@ namespace estudosFormsCsharp
         {
 
         }
+
+        private void checkBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_CheckBox cb = new F_CheckBox();
+
+            cb.ShowDialog();
+        }
+
+        private void checkedListBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_CheckedListBox clb = new F_CheckedListBox();
+            clb.ShowDialog();
+        }
     }
 }
