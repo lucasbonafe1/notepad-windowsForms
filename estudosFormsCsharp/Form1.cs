@@ -63,5 +63,11 @@ namespace estudosFormsCsharp
             F_CheckedListBox clb = new F_CheckedListBox();
             clb.ShowDialog();
         }
+
+        private void comboBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_ComboBox f_ComboBox = new F_ComboBox();
+            f_ComboBox.ShowDialog();
+        }
     }
 }

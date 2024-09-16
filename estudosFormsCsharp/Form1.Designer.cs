@@ -37,6 +37,7 @@
             componentesToolStripMenuItem = new ToolStripMenuItem();
             checkBoxToolStripMenuItem = new ToolStripMenuItem();
             checkedListBoxToolStripMenuItem = new ToolStripMenuItem();
+            comboBoxToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,7 +99,7 @@
             // 
             // componentesToolStripMenuItem
             // 
-            componentesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem });
+            componentesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem, comboBoxToolStripMenuItem });
             componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             componentesToolStripMenuItem.Size = new Size(94, 20);
             componentesToolStripMenuItem.Text = "Componentes";
@@ -116,6 +117,13 @@
             checkedListBoxToolStripMenuItem.Size = new Size(180, 22);
             checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
             checkedListBoxToolStripMenuItem.Click += checkedListBoxToolStripMenuItem_Click;
+            // 
+            // comboBoxToolStripMenuItem
+            // 
+            comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
+            comboBoxToolStripMenuItem.Size = new Size(180, 22);
+            comboBoxToolStripMenuItem.Text = "ComboBox";
+            comboBoxToolStripMenuItem.Click += comboBoxToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -153,5 +161,6 @@
         private ToolStripMenuItem componentesToolStripMenuItem;
         private ToolStripMenuItem checkBoxToolStripMenuItem;
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
+        private ToolStripMenuItem comboBoxToolStripMenuItem;
     }
 }
