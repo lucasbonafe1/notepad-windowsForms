@@ -72,6 +72,9 @@
             btn_direita = new ToolStripButton();
             notifyIcon1 = new NotifyIcon(components);
             richTextBox1 = new RichTextBox();
+            saveFileDialog1 = new SaveFileDialog();
+            printDialog1 = new PrintDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             menuStrip2.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -109,6 +112,7 @@
             salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
             salvarToolStripMenuItem.Size = new Size(120, 22);
             salvarToolStripMenuItem.Text = "Salvar";
+            salvarToolStripMenuItem.Click += salvarToolStripMenuItem_Click;
             // 
             // imprimirToolStripMenuItem
             // 
@@ -241,6 +245,7 @@
             btn_abrir.Name = "btn_abrir";
             btn_abrir.Size = new Size(23, 22);
             btn_abrir.Text = "Abrir";
+            btn_abrir.Click += btn_abrir_Click;
             // 
             // btn_salvar
             // 
@@ -250,6 +255,7 @@
             btn_salvar.Name = "btn_salvar";
             btn_salvar.Size = new Size(23, 22);
             btn_salvar.Text = "Salvar";
+            btn_salvar.Click += btn_salvar_Click;
             // 
             // toolStripSeparator2
             // 
@@ -360,8 +366,17 @@
             richTextBox1.Size = new Size(575, 368);
             richTextBox1.TabIndex = 8;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
-            // Form1
+            // saveFileDialog1
+            // 
+            saveFileDialog1.DefaultExt = "txt";
+            // 
+            // printDialog1
+            // 
+            printDialog1.UseEXDialog = true;
+            // 
+            // Notepad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -373,9 +388,9 @@
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
-            Name = "Form1";
+            Name = "Notepad";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Bones Notepad";
+            Text = "Notepad Bonas";
             Load += Form1_Load;
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
@@ -428,5 +443,8 @@
         private ToolStripButton btn_center;
         private ToolStripButton btn_direita;
         private RichTextBox richTextBox1;
+        private SaveFileDialog saveFileDialog1;
+        private PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
