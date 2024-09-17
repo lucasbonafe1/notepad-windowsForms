@@ -42,6 +42,7 @@
             editarToolStripMenuItem = new ToolStripMenuItem();
             copiarToolStripMenuItem = new ToolStripMenuItem();
             colarToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripSeparator();
             desfazerToolStripMenuItem = new ToolStripMenuItem();
             refazerToolStripMenuItem = new ToolStripMenuItem();
             formatarToolStripMenuItem = new ToolStripMenuItem();
@@ -75,6 +76,7 @@
             saveFileDialog1 = new SaveFileDialog();
             printDialog1 = new PrintDialog();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            openFileDialog1 = new OpenFileDialog();
             menuStrip2.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -106,6 +108,7 @@
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
             abrirToolStripMenuItem.Size = new Size(120, 22);
             abrirToolStripMenuItem.Text = "Abrir";
+            abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
             // salvarToolStripMenuItem
             // 
@@ -133,7 +136,7 @@
             // 
             // editarToolStripMenuItem
             // 
-            editarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { copiarToolStripMenuItem, colarToolStripMenuItem, desfazerToolStripMenuItem, refazerToolStripMenuItem });
+            editarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { copiarToolStripMenuItem, colarToolStripMenuItem, toolStripMenuItem2, desfazerToolStripMenuItem, refazerToolStripMenuItem });
             editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             editarToolStripMenuItem.Size = new Size(49, 20);
             editarToolStripMenuItem.Text = "Editar";
@@ -143,12 +146,19 @@
             copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
             copiarToolStripMenuItem.Size = new Size(118, 22);
             copiarToolStripMenuItem.Text = "Copiar";
+            copiarToolStripMenuItem.Click += btn_copiar_Click;
             // 
             // colarToolStripMenuItem
             // 
             colarToolStripMenuItem.Name = "colarToolStripMenuItem";
             colarToolStripMenuItem.Size = new Size(118, 22);
             colarToolStripMenuItem.Text = "Colar";
+            colarToolStripMenuItem.Click += btn_colar_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(115, 6);
             // 
             // desfazerToolStripMenuItem
             // 
@@ -174,18 +184,21 @@
             negritoToolStripMenuItem.Name = "negritoToolStripMenuItem";
             negritoToolStripMenuItem.Size = new Size(143, 22);
             negritoToolStripMenuItem.Text = "Negrito";
+            negritoToolStripMenuItem.Click += negritoToolStripMenuItem_Click;
             // 
             // itálicoToolStripMenuItem
             // 
             itálicoToolStripMenuItem.Name = "itálicoToolStripMenuItem";
             itálicoToolStripMenuItem.Size = new Size(143, 22);
             itálicoToolStripMenuItem.Text = "Itálico";
+            itálicoToolStripMenuItem.Click += itálicoToolStripMenuItem_Click;
             // 
             // sublinhadoToolStripMenuItem
             // 
             sublinhadoToolStripMenuItem.Name = "sublinhadoToolStripMenuItem";
             sublinhadoToolStripMenuItem.Size = new Size(143, 22);
             sublinhadoToolStripMenuItem.Text = "Sublinhado";
+            sublinhadoToolStripMenuItem.Click += sublinhadoToolStripMenuItem_Click;
             // 
             // alinhamentoToolStripMenuItem
             // 
@@ -270,6 +283,7 @@
             btn_copiar.Name = "btn_copiar";
             btn_copiar.Size = new Size(23, 22);
             btn_copiar.Text = "Copiar";
+            btn_copiar.Click += btn_copiar_Click;
             // 
             // btn_colar
             // 
@@ -279,6 +293,7 @@
             btn_colar.Name = "btn_colar";
             btn_colar.Size = new Size(23, 22);
             btn_colar.Text = "Colar";
+            btn_colar.Click += btn_colar_Click;
             // 
             // toolStripSeparator1
             // 
@@ -293,6 +308,7 @@
             btn_negrito.Name = "btn_negrito";
             btn_negrito.Size = new Size(23, 22);
             btn_negrito.Text = "Negrito";
+            btn_negrito.Click += btn_negrito_Click;
             // 
             // btn_italico
             // 
@@ -302,6 +318,7 @@
             btn_italico.Name = "btn_italico";
             btn_italico.Size = new Size(23, 22);
             btn_italico.Text = "Italico";
+            btn_italico.Click += btn_italico_Click;
             // 
             // btn_sublinhado
             // 
@@ -311,6 +328,7 @@
             btn_sublinhado.Name = "btn_sublinhado";
             btn_sublinhado.Size = new Size(23, 22);
             btn_sublinhado.Text = "Sublinhado";
+            btn_sublinhado.Click += btn_sublinhado_Click;
             // 
             // btn_fonte
             // 
@@ -366,15 +384,19 @@
             richTextBox1.Size = new Size(575, 368);
             richTextBox1.TabIndex = 8;
             richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // saveFileDialog1
             // 
             saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "(*.txt)|*.txt";
             // 
             // printDialog1
             // 
             printDialog1.UseEXDialog = true;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // Notepad
             // 
@@ -390,7 +412,7 @@
             MinimizeBox = false;
             Name = "Notepad";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Notepad Bonas";
+            Text = "Notepad Bonafé";
             Load += Form1_Load;
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
@@ -446,5 +468,7 @@
         private SaveFileDialog saveFileDialog1;
         private PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private OpenFileDialog openFileDialog1;
+        private ToolStripSeparator toolStripMenuItem2;
     }
 }
