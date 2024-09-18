@@ -262,6 +262,7 @@ namespace estudosFormsCsharp
             int cont = 0;
             string linha = null;
 
+            // Verifica o tamanho das margens e se for pequena ajusta para 20
             float margemEsquerda = e.MarginBounds.Left - 50;
             float margemSuperior = e.MarginBounds.Top - 50;
 
@@ -273,14 +274,17 @@ namespace estudosFormsCsharp
             if (margemSuperior < 5)
             {
                 margemSuperior = 20;
-            }
+            } 
+            // 
 
             Font fonte = richTextBox1.Font;
             SolidBrush pincel = new SolidBrush(Color.Black);
 
+            // Cálculo da quantidade de linhas que cabem na página 
             linhasPagina = e.MarginBounds.Height / fonte.GetHeight(e.Graphics);
             linha = leitura.ReadLine();
 
+            // Loop para desenhar linhas até que cheguem no limite da página
             while (cont < linhasPagina)
             {
                 PosY = (margemSuperior + (cont + fonte.GetHeight(e.Graphics)));
@@ -290,6 +294,7 @@ namespace estudosFormsCsharp
                 linha = leitura.ReadLine();
             }
 
+            // Verificação se há mais páginas, se houver também faz a impressão
             e.HasMorePages = linha != null ? true : false;
 
             pincel.Dispose();

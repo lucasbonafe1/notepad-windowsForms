@@ -86,7 +86,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, editarToolStripMenuItem, formatarToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(575, 24);
+            menuStrip2.Size = new Size(626, 24);
             menuStrip2.TabIndex = 6;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -234,7 +234,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btn_novo, btn_abrir, btn_salvar, toolStripSeparator2, btn_copiar, btn_colar, toolStripSeparator1, btn_negrito, btn_italico, btn_sublinhado, btn_fonte, toolStripSeparator3, btn_esquerda, btn_center, btn_direita });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(575, 25);
+            toolStrip1.Size = new Size(626, 25);
             toolStrip1.TabIndex = 7;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -383,7 +383,7 @@
             // 
             richTextBox1.Location = new Point(0, 52);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(575, 368);
+            richTextBox1.Size = new Size(626, 404);
             richTextBox1.TabIndex = 8;
             richTextBox1.Text = "";
             // 
@@ -416,10 +416,11 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(575, 421);
+            ClientSize = new Size(626, 458);
             Controls.Add(richTextBox1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
