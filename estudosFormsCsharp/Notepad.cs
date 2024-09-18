@@ -149,7 +149,7 @@ namespace estudosFormsCsharp
             if (novoEstilo.HasFlag(estilo))
                 novoEstilo &= ~estilo;
             else
-                novoEstilo |= estilo; 
+                novoEstilo |= estilo;
 
             richTextBox1.SelectionFont = new Font(nomeDaFonte, tamanhoDaFonte, novoEstilo);
         }
@@ -274,7 +274,7 @@ namespace estudosFormsCsharp
             if (margemSuperior < 5)
             {
                 margemSuperior = 20;
-            } 
+            }
             // 
 
             Font fonte = richTextBox1.Font;
@@ -298,6 +298,11 @@ namespace estudosFormsCsharp
             e.HasMorePages = linha != null ? true : false;
 
             pincel.Dispose();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
